@@ -1,7 +1,22 @@
+/*
+ * EMAIL VALIDATION ASSUMPTIONS WHICH I CONSIDERED ARE AS FOLLOWS :-
+ * The email strings which is valid is as follows :- Alphanumeric characters @ domain name(consists exactly two or three characters after .(dot)).
+ * Only one @ is allowed.
+ * Only one .(dot) is allowed.
+ * @ appears before .(dot).
+ * Did not starts with characters other than alphanumeric.
+ * Cannot be empty.
+ * Cannot be null.
+ * At least one character between @ and .(dot).
+ * Domain name assumed only alphabets with a single .(dot).
+ * 
+ */
+
 package com.snailark.usingjunit.junit;
 
 public class EmailValidator {
 	public boolean vaidateEmail(String email) {
+		System.out.println("Email Validator");
 		if (email == null) {
 			// System.out.println("Email cannot be null");
 			return false;
