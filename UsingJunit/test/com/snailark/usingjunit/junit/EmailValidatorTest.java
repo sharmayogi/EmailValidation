@@ -98,4 +98,11 @@ public class EmailValidatorTest {
 		boolean result = validator.vaidateEmail("sharma88yogi@gmail.com");
 		assertTrue("Test 15", result);
 	}
+	@Test
+	public void testValidateEmailWithSpace() {
+		
+		boolean result = validator.vaidateEmail("sharma88 yogi@gmail.com");
+		assertTrue("Test 15", result);
+	}
+	
 }
