@@ -102,14 +102,14 @@ public class EmailValidatorTest {
 	public void testValidateEmailWithSpace() {
 		
 		boolean result = validator.vaidateEmail("sharma88 yogi@gmail.com");
-		assertTrue("Test 15", result);
+		assertTrue("Test 16", result);
 	}
 	
 	@Test
 	public void testValidateEmailWhichIsInValid() {
 		
 		boolean result = validator.vaidateEmail("sharma88yogi@gmailcom");
-		assertTrue("Test 15", result);
+		assertTrue("Test 17", result);
 	}
 	
 }
