@@ -9,12 +9,12 @@ public class EmailValidatorTest {
 	EmailValidator validator = new EmailValidator();
 
 	@Test
-	public void testValidateEmailThreeCharactersAfterDot() {
+	public void testValidateEmailExactlyThreeCharactersAfterDot() {
 		boolean result = validator.vaidateEmail("sharma88yogi@gmail.com");
 		assertTrue("Test 1", result);
 	}
 	@Test
-	public void testValidateEmailTwoCharactersAfterDot() {
+	public void testValidateEmailExactlyTwoCharactersAfterDot() {
 		
 		boolean result = validator.vaidateEmail("sharma88yogi@sa.om");
 		assertTrue("Test 2", result);
@@ -45,7 +45,7 @@ public class EmailValidatorTest {
 			assertFalse("Test 6", result);
 		}
 	@Test
-		public void testValidateEmailFourCharacterAfterDot() {
+		public void testValidateEmailMoreThanThreeCharacters() {
 			
 			boolean result = validator.vaidateEmail("sharma88yogi@sa.gcom");
 			assertFalse("Test 7", result);
@@ -80,4 +80,22 @@ public class EmailValidatorTest {
 			boolean result = validator.vaidateEmail("sharma88yogigmail.com");
 			assertFalse("Test 11", result);
 		}
+	@Test
+	public void testValidateEmailStartingWithUnderScore() {
+		
+		boolean result = validator.vaidateEmail("_sharma88yogigmail.com");
+		assertFalse("Test 11", result);
+	}
+	@Test
+	public void testValidateEmailContainsLessThanTwoCharacters() {
+		
+		boolean result = validator.vaidateEmail("sharma88yogi@gmail.c");
+		assertFalse("Test 11", result);
+	}
+	@Test
+	public void testValidateEmailWhichIsValid() {
+		
+		boolean result = validator.vaidateEmail("sharma88yogi@gmail.com");
+		assertTrue("Test 11", result);
+	}
 }
