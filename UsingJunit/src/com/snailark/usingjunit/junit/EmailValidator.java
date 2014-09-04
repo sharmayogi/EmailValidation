@@ -16,7 +16,6 @@ package com.snailark.usingjunit.junit;
 
 public class EmailValidator {
 	public boolean vaidateEmail(String email) {
-		System.out.println("Email Validator");
 		if (email == null) {
 			// System.out.println("Email cannot be null");
 			return false;
