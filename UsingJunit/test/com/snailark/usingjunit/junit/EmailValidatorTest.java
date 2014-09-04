@@ -78,24 +78,24 @@ public class EmailValidatorTest {
 		public void testValidateEmailWithoutAtTheRate() {
 			
 			boolean result = validator.vaidateEmail("sharma88yogigmail.com");
-			assertFalse("Test 11", result);
+			assertFalse("Test 12", result);
 		}
 	@Test
 	public void testValidateEmailStartingWithUnderScore() {
 		
 		boolean result = validator.vaidateEmail("_sharma88yogigmail.com");
-		assertFalse("Test 11", result);
+		assertFalse("Test 13", result);
 	}
 	@Test
 	public void testValidateEmailContainsLessThanTwoCharacters() {
 		
 		boolean result = validator.vaidateEmail("sharma88yogi@gmail.c");
-		assertFalse("Test 11", result);
+		assertFalse("Test 14", result);
 	}
 	@Test
 	public void testValidateEmailWhichIsValid() {
 		
 		boolean result = validator.vaidateEmail("sharma88yogi@gmail.com");
-		assertTrue("Test 11", result);
+		assertTrue("Test 15", result);
 	}
 }
