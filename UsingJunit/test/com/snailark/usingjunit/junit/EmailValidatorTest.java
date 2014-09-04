@@ -98,4 +98,12 @@ public class EmailValidatorTest {
 		boolean result = validator.vaidateEmail("sharma88yogi@gmail.com");
 		assertTrue("Test 15", result);
 	}
+	
+	@Test
+	public void testValidateEmailWhichIsInValid() {
+		
+		boolean result = validator.vaidateEmail("sharma88yogi@gmailcom");
+		assertTrue("Test 15", result);
+	}
+	
 }
